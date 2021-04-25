@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model, isValidObjectId } from 'mongoose';
@@ -90,9 +89,3 @@ export class NestService {
 		return result;
 	}
 }
-=======
-import { Injectable } from '@nestjs/common';
-
-@Injectable()
-export class NestService {}
->>>>>>> a00930f44e8074adfde16337f107f14b0e3a52a5
