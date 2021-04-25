@@ -1,0 +1,22 @@
+{
+  "name": "nestjs-mongo",
+  "version": "1.0.0",
+  "description": "NestJS / mongoDB / mongoose",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/yongsoocho/NestJS-mongo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yongsoocho/NestJS-mongo/issues"
+  },
+  "homepage": "https://github.com/yongsoocho/NestJS-mongo#readme",
+  "dependencies": {
+    "@nestjs/cli": "^7.6.0"
+  }
+}
