@@ -40,6 +40,7 @@ export class PopulateController {
 	postBlog(@Body() body) {
 		return this.populateService.postBlog(body);
 	}
+<<<<<<< HEAD
 
 	@Put('/blog/:id')
 	updateBlog(
@@ -61,4 +62,6 @@ export class PopulateController {
 	) {
 		return this.populateService.postComment(body, params);
 	}
+=======
+>>>>>>> a00930f44e8074adfde16337f107f14b0e3a52a5
 }

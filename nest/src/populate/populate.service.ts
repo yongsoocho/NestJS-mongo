@@ -3,14 +3,21 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model, isValidObjectId } from 'mongoose';
 import { BlogDocument, IBlog } from './schema/blog.schema';
 import { UserDocument, IUser } from './schema/user.schema';
+<<<<<<< HEAD
 import { CommentDocument, IComment } from './schema/comment.schema';
+=======
+>>>>>>> a00930f44e8074adfde16337f107f14b0e3a52a5
 
 @Injectable()
 export class PopulateService {
 	constructor(
 		@InjectModel('User') private readonly userModel:Model<UserDocument>,
+<<<<<<< HEAD
 		@InjectModel('Blog') private readonly blogModel:Model<BlogDocument>,
 		@InjectModel('Comment') private readonly commentModel:Model<CommentDocument>
+=======
+		@InjectModel('Blog') private readonly blogModel:Model<BlogDocument>
+>>>>>>> a00930f44e8074adfde16337f107f14b0e3a52a5
 	) {}
 
 	async getUser():Promise<IUser[]> {
@@ -29,12 +36,16 @@ export class PopulateService {
 	}
 
 	async getBlog():Promise<IBlog[]> {
+<<<<<<< HEAD
 		const result = await this.blogModel
 															.find()
 															.populate([
 																{ path:'user' },
 																{ path:'comments', populate:{ path:'user' } }
 															]);
+=======
+		const result = await this.blogModel.find();
+>>>>>>> a00930f44e8074adfde16337f107f14b0e3a52a5
 		return result;
 	}
 
@@ -43,6 +54,7 @@ export class PopulateService {
 		if(!isValidObjectId(id)) {
 			throw new NotFoundException('404 NOT FOUND')
 		}
+<<<<<<< HEAD
 		const result = await this.blogModel
 															.findOne({ _id:id })
 															.populate([
@@ -51,6 +63,9 @@ export class PopulateService {
 															]);
 															// .populate('user')
 															// .populate({ path:'comments' });
+=======
+		const result = await this.blogModel.findOne({ user:id }).populate('user');
+>>>>>>> a00930f44e8074adfde16337f107f14b0e3a52a5
 		return result;
 	}
 
@@ -67,6 +82,7 @@ export class PopulateService {
 		const result = await newBlog.save();
 		return result;
 	}
+<<<<<<< HEAD
 
 	async updateBlog(body:IBlog, params) {
 		const { id } = params;
@@ -102,4 +118,6 @@ export class PopulateService {
 		const result = await newComment.save();
 		return result;
 	}
+=======
+>>>>>>> a00930f44e8074adfde16337f107f14b0e3a52a5
 }

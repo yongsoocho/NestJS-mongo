@@ -14,6 +14,7 @@ export const BlogSchema = new mongoose.Schema({
 		required:true,
 		ref:'User'
 	}
+<<<<<<< HEAD
 }, { 
 	timestamps:true,
 	toJSON:{ virtuals:true },
@@ -25,6 +26,9 @@ BlogSchema.virtual("comments", {
 	localField:'_id',
 	foreignField:'blog'
 });
+=======
+}, { timestamps:true });
+>>>>>>> a00930f44e8074adfde16337f107f14b0e3a52a5
 
 export interface IBlog {
 	title:string;

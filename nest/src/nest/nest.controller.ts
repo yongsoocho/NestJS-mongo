@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common';
 import { NestService } from './nest.service';
 import { UserDocument, IUser } from './schema/user.schema';
@@ -63,3 +64,9 @@ export class NestController {
 		return this.nestService.postComment(body, params);
 	}
 }
+=======
+import { Controller } from '@nestjs/common';
+
+@Controller('nest')
+export class NestController {}
+>>>>>>> a00930f44e8074adfde16337f107f14b0e3a52a5

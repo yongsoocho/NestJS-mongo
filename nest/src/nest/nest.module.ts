@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { NestController } from './nest.controller';
 import { NestService } from './nest.service';
 
+<<<<<<< HEAD
 import { MongooseModule } from '@nestjs/mongoose';
 import { UserSchema } from './schema/user.schema';
 import { BlogSchema } from './schema/blog.schema';
@@ -25,6 +26,9 @@ import { CommentSchema } from './schema/comment.schema';
 			]
 		),
 	],
+=======
+@Module({
+>>>>>>> a00930f44e8074adfde16337f107f14b0e3a52a5
   controllers: [NestController],
   providers: [NestService]
 })
